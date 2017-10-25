@@ -3,6 +3,7 @@
 <head>
   <title>hello VR</title>
   <script src="aframe-v0.7.1.js"></script>
+  <script src="aframe-animation-component.js"></script>
 </head>
 
 <body>
@@ -12,7 +13,10 @@
     <img id="earth_norm" src="earth_v2_norm.png">
     <img id="sky" src="sky_Image.png">
   </a-assets>
-  <a-sphere position="0 -500 -500" radius="500" rotation="0 -125 0" segments-height="24" segments-width="54" material="src: #earth" normal-map="src: #earth_norm" shadow="receive: false" ></a-sphere>
+  <a-sphere position="0 -500 -500" radius="500" rotation="0 -125 10" segments-height="24" segments-width="54" material="src: #earth" normal-map="src: #earth_norm" shadow="receive: false"
+  animation__rotation="property: rotation; dir: alternate; dur: 150000;
+                            loop: true; to: 0 360 0"
+  ></a-sphere>
   <a-box position="-1 0.5 1" width="1" height="1" depth="1" color="#f28de0"></a-box>
   <a-cylinder position="1 0.75 1" radius="0.5" height="1.5" rotation="45 45 45" color="#8d92f2"></a-cylinder>
   <a-plane width="4" height="4" rotation="-90 0 0" color="#8df2c1"></a-plane>
